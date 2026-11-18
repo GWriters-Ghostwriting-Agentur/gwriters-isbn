@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gwriters-ghostwriting-agentur.github.io/gwriters-isbn/sitemap.xml

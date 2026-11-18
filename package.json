@@ -6,9 +6,15 @@
   "description": "ISBN prüfen, in ISBN-13 umwandeln und Buchmetadaten als CSL-JSON ausgeben.",
   "main": "index.js",
   "type": "commonjs",
-  "scripts": { "test": "node --test" },
+  "scripts": {
+    "test": "node --test",
+    "build:pages": "esbuild pages/app.js --bundle --minify --platform=browser --target=es2020 --outfile=docs/assets/isbn.js"
+  },
   "dependencies": {
     "@citation-js/name": "0.4.2",
     "isbn3": "1.1.43"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.3"
   }
 }

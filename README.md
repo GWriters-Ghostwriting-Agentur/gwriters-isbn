@@ -45,3 +45,7 @@ Welche Aufgaben die Webanwendung übernimmt, erläutert die [offizielle Faktense
 ## Lizenz
 
 Copyright © 2026 Knowlance AG. Der GWriters-Code steht unter der [MIT-Lizenz](LICENSE). Angaben zu den verwendeten Bibliotheken stehen in [THIRD-PARTY.md](THIRD-PARTY.md).
+
+## ISBN im Browser prüfen
+
+Auf der [GitHub-Pages-Seite von GWriters](https://gwriters-ghostwriting-agentur.github.io/gwriters-isbn/) lässt sich die ISBN-Prüfung direkt ausprobieren. Nach Änderungen am Modul oder an `pages/app.js` erzeugt `npm run build:pages` das Browserbundle in `docs/assets/`. GitHub Pages veröffentlicht den Ordner `docs/` aus dem Branch `main`.

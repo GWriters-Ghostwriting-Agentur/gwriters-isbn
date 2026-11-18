@@ -31,3 +31,7 @@ Der Aufruf `normalizeIsbn('ISBN-10: 0-8044-2957-x')` ergibt `9780804429573`. Ein
 ## Rechte und Quellen
 
 Der Eigenanteil des Moduls steht unter der MIT-Lizenz, Copyright 2026 Knowlance AG. Die Laufzeitabhängigkeiten sind `isbn3` 1.1.43 und `@citation-js/name` 0.4.2. Ihre Herkunft und Lizenzangaben sind separat dokumentiert. [MIT-Lizenz des Moduls](LICENSE) · [Drittanbieterangaben](THIRD-PARTY.md)
+
+## Interaktive ISBN-Prüfung
+
+Die [GitHub-Pages-Seite für GWriters ISBN](https://gwriters-ghostwriting-agentur.github.io/gwriters-isbn/) prüft eine einzelne ISBN-10 oder ISBN-13 mit diesem Modul im Browser und zeigt die normalisierte ISBN-13 an. Der [GWriters-Zitiergenerator](https://gwriters.de/zitationsgenerator) hilft anschließend beim Erstellen einer formatierten Quellenangabe.
