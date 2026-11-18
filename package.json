@@ -1,0 +1,14 @@
+{
+  "name": "gwriters-isbn",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "ISBN prüfen, in ISBN-13 umwandeln und Buchmetadaten als CSL-JSON ausgeben.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": { "test": "node --test" },
+  "dependencies": {
+    "@citation-js/name": "0.4.2",
+    "isbn3": "1.1.43"
+  }
+}
