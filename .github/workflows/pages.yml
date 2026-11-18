@@ -1,0 +1,45 @@
+name: Publish ISBN tool
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', 'pages/sofia-pro.sha256', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: isbn-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Assemble the licensed website fonts
+        working-directory: docs/assets/fonts
+        run: |
+          for face in SofiaPro SofiaPro-SemiBold SofiaPro-Bold; do
+            curl --fail --silent --show-error --location --retry 3 --max-time 30 \
+              "https://gwriters.de/assets/font/${face}.woff2" --output "${face}.woff2"
+          done
+          sha256sum --check ../../../pages/sofia-pro.sha256
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -48,4 +48,4 @@ Copyright © 2026 Knowlance AG. Der GWriters-Code steht unter der [MIT-Lizenz](L
 
 ## ISBN im Browser prüfen
 
-Auf der [GitHub-Pages-Seite von GWriters](https://gwriters-ghostwriting-agentur.github.io/gwriters-isbn/) lässt sich die ISBN-Prüfung direkt ausprobieren. Nach Änderungen am Modul oder an `pages/app.js` erzeugt `npm run build:pages` das Browserbundle in `docs/assets/`. GitHub Pages veröffentlicht den Ordner `docs/` aus dem Branch `main`.
+Auf der [GitHub-Pages-Seite von GWriters](https://gwriters-ghostwriting-agentur.github.io/gwriters-isbn/) lässt sich die ISBN-Prüfung direkt ausprobieren. Nach Änderungen am Modul oder an `pages/app.js` erzeugt `npm run build:pages` das Browserbundle in `docs/assets/`. Der Pages-Workflow veröffentlicht `docs/` aus `main` und fügt beim Build die für die Projektseite lizenzierten Sofia-Pro-Webfonts hinzu. Er prüft ihre SHA-256-Werte vor der Auslieferung. Angaben zu den Webfonts stehen auf der Lizenzseite.
